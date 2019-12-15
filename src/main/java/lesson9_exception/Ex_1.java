@@ -16,7 +16,13 @@ public class Ex_1 {
     public void numberCheck (int i) throws Exception {
         if (i<0) System.out.println("Number < 0");
         else if(i>0) System.out.println("Number > 0");
-        else if (i==0) throw new Exception("Number = 0");
+        else if (i==0) throw new MyException("Number = "+i);
     }
 
+}
+
+class MyException extends Exception{
+    public MyException(String str){
+        super(str);
+    }
 }

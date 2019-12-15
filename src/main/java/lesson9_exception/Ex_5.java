@@ -2,7 +2,12 @@ package lesson9_exception;
 
 public class Ex_5 {
     public static void main(String[] args) {
-        iCanTrowException();
+
+        try {
+            iCanTrowException();
+        }catch (NullPointerException e){
+            System.out.println("There is error");
+        }
     }
 
     public static void iCanTrowException(){
